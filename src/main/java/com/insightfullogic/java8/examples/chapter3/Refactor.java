@@ -29,7 +29,7 @@ public class Refactor {
             }
             return trackNames;
         }
-// END findLongTracks_0
+        // END findLongTracks_0
     }
 
     public static class Step1 implements LongTrackFinder {
@@ -48,7 +48,7 @@ public class Refactor {
                     });
             return trackNames;
         }
-// END findLongTracks_1
+        // END findLongTracks_1
     }
 
     public static class Step2 implements LongTrackFinder {
@@ -64,7 +64,7 @@ public class Refactor {
                     });
             return trackNames;
         }
-// END findLongTracks_2
+        // END findLongTracks_2
     }
 
     public static class Step3 implements LongTrackFinder {
@@ -80,7 +80,7 @@ public class Refactor {
 
             return trackNames;
         }
-// END findLongTracks_3
+        // END findLongTracks_3
     }
 
     public static class Step4 implements LongTrackFinder {
@@ -92,7 +92,6 @@ public class Refactor {
                     .map(track -> track.getName())
                     .collect(toSet());
         }
-// END findLongTracks_4
+        // END findLongTracks_4
     }
-
 }

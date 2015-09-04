@@ -29,6 +29,7 @@ public class HigherOrderFunctionExamplesTest {
         // END collect_to_list_1
     }
 
+    //xl Example 3-9
     @Test
     public void mapToUpperCase() {
         // BEGIN map_to_uppercase
@@ -55,7 +56,7 @@ public class HigherOrderFunctionExamplesTest {
 
     @Test
     public void imperativeMaxLength() {
-// BEGIN imperativeMaxLength
+        // BEGIN imperativeMaxLength
         List<Track> tracks = asList(new Track("Bakai", 524),
                 new Track("Violets for Your Furs", 378),
                 new Track("Time Was", 451));
@@ -68,12 +69,12 @@ public class HigherOrderFunctionExamplesTest {
         }
 
         assertEquals(tracks.get(1), shortestTrack);
-// END imperativeMaxLength
+        // END imperativeMaxLength
     }
 
     @Test
     public void streamsMaxLength() {
-// BEGIN streamsMaxLength
+        // BEGIN streamsMaxLength
         List<Track> tracks = asList(new Track("Bakai", 524),
                 new Track("Violets for Your Furs", 378),
                 new Track("Time Was", 451));
@@ -83,12 +84,12 @@ public class HigherOrderFunctionExamplesTest {
                 .get();
 
         assertEquals(tracks.get(1), shortestTrack);
-// END streamsMaxLength
+        // END streamsMaxLength
     }
 
     @Test
     public void streamsAnyMatch() {
-// BEGIN streamsAnyMatch
+        // BEGIN streamsAnyMatch
         List<Track> tracksOnColtrane = asList(new Track("Bakai", 524),
                 new Track("Violets for Your Furs", 378),
                 new Track("Time Was", 451));
@@ -96,12 +97,12 @@ public class HigherOrderFunctionExamplesTest {
         boolean matchLength = tracksOnColtrane.stream()
                 .anyMatch(track -> track.getLength() > 500);
         assertTrue(matchLength);
-// END streamsAnyMatch
+        // END streamsAnyMatch
     }
 
     @Test
     public void imperativeAnyMatch() {
-// BEGIN imperativeAnyMatch
+        // BEGIN imperativeAnyMatch
         List<Track> tracksOnColtrane = asList(new Track("Bakai", 524),
                 new Track("Violets for Your Furs", 378),
                 new Track("Time Was", 451));
@@ -114,7 +115,7 @@ public class HigherOrderFunctionExamplesTest {
         }
 
         assertTrue(matchLength);
-// END imperativeAnyMatch
+        // END imperativeAnyMatch
     }
 
     @Test
@@ -152,6 +153,7 @@ public class HigherOrderFunctionExamplesTest {
         // END count_using_reduce_for
     }
 
+    //xl Example 3-11
     @Test
     public void functionalStringsWithNumbers() {
         // BEGIN strings_numbers_filter
@@ -164,6 +166,7 @@ public class HigherOrderFunctionExamplesTest {
         // END strings_numbers_filter
     }
 
+    //xl Example 3-10
     @Test
     public void imperativeStringsWithNumbers() {
         // BEGIN strings_numbers_for
@@ -188,6 +191,4 @@ public class HigherOrderFunctionExamplesTest {
         assertEquals(asList(1, 2, 3, 4), together);
         // END flatmap_characters
     }
-
 }
-
