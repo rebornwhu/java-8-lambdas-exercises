@@ -72,6 +72,7 @@ public class HigherOrderFunctionExamplesTest {
         // END imperativeMaxLength
     }
 
+    //xl Example 3-13
     @Test
     public void streamsMaxLength() {
         // BEGIN streamsMaxLength
@@ -80,7 +81,7 @@ public class HigherOrderFunctionExamplesTest {
                 new Track("Time Was", 451));
 
         Track shortestTrack = tracks.stream()
-                .min(Comparator.comparing(track -> track.getLength()))
+                .min(Comparator.comparing(track -> track.getLength())) // Function Interface
                 .get();
 
         assertEquals(tracks.get(1), shortestTrack);
@@ -181,6 +182,7 @@ public class HigherOrderFunctionExamplesTest {
         // END strings_numbers_for
     }
 
+    //xl Example 3-12
     @Test
     public void flatMapCharacters() {
         // BEGIN flatmap_characters
