@@ -22,7 +22,7 @@ public class MyAnswer1 {
                  * Stream.of() is a factory method which
                  * "Returns a sequential ordered stream whose elements are the specified values."
                  * To help yourself understand lambda expression, artist -> ...
-                 * means "for each artist in the stream"
+                 * means pass artist as an argument, return a boolean
                  */
                 .flatMap(artist -> (Stream.of(artist.getName(), artist.getNationality())))
                 .collect(toList());
